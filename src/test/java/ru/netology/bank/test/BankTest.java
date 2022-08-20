@@ -13,13 +13,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class BankTest {
 
     @BeforeEach
-    public void setup(){
-    //Configuration.holdBrowserOpen = true;
+    public void setup() {
+        //Configuration.holdBrowserOpen = true;
         open("http://localhost:9999");
     }
 
     @Test
-    void souldTopUpCard1(){
+    void souldTopUpCard1() {
         int amaunt = 200;
         var authInfo = DataHelper.getAuthInfo();
         var loginPage = new LoginPage();
@@ -32,8 +32,9 @@ public class BankTest {
         var balanceE = balance1 + amaunt;
         $("[data-test-id='92df3f1c-a033-48e6-8390-206f6b1f56c0'").shouldHave(Condition.text(String.valueOf(balanceE)));
     }
+
     @Test
-    void souldTopUpCard2(){
+    void souldTopUpCard2() {
         int amaunt = 100;
         var authInfo = DataHelper.getAuthInfo();
         var loginPage = new LoginPage();
@@ -46,8 +47,9 @@ public class BankTest {
         var balanceE = balance1 + amaunt;
         $("[data-test-id='0f3f5c2a-249e-4c3d-8287-09f7a039391d'").shouldHave(Condition.text(String.valueOf(balanceE)));
     }
+
     @Test
-    void souldTranferMoreThenHaveCard2(){
+    void souldTranferMoreThenHaveCard2() {
         int amaunt = 1000;
         var authInfo = DataHelper.getAuthInfo();
         var loginPage = new LoginPage();

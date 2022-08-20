@@ -17,6 +17,7 @@ public class CabinetPage {
     private final String balanceFinish = " р.";
 
     public CabinetPage() {
+
         heading.shouldBe(visible);
     }
 

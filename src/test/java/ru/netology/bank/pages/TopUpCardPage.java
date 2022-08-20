@@ -18,14 +18,14 @@ public class TopUpCardPage {
         to.shouldHave(Condition.value(cardNumber));
     }
 
-    public CabinetPage topUpCard(String amValue, String fromCard){
+    public CabinetPage topUpCard(String amValue, String fromCard) {
         amount.setValue(amValue);
         from.setValue(fromCard);
         topUpButton.click();
         return new CabinetPage();
     }
 
-    public CabinetPage cancelTopUp(){
+    public CabinetPage cancelTopUp() {
         abortButton.click();
         return new CabinetPage();
     }

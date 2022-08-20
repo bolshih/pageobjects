@@ -15,7 +15,7 @@ public class VerificationPage {
         codeField.shouldBe(visible);
     }
 
-    public CabinetPage verify(DataHelper.VerificationCode verificationCode){
+    public CabinetPage verify(DataHelper.VerificationCode verificationCode) {
         codeField.setValue(verificationCode.getCode());
         verifyButton.click();
         return new CabinetPage();
