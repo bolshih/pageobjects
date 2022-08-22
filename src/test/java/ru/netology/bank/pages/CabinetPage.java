@@ -28,12 +28,12 @@ public class CabinetPage {
 
     public TopUpCardPage refilCard1() {
         topUpCardButton.first().click();
-        return new TopUpCardPage("**** **** **** 0001");
+        return new TopUpCardPage();
     }
 
     public TopUpCardPage refilCard2() {
         topUpCardButton.last().click();
-        return new TopUpCardPage("**** **** **** 0002");
+        return new TopUpCardPage();
     }
 
     public int getCardBalance(String id) {
